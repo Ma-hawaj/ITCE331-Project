@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Temperature</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 90vh;
+            background-color: black;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        h1 {
+            color: #ffffff;
+            margin-bottom: 10px;
+            font-size: 100px;
+        }
+        
+        p {
+            color: #ffffff;
+            margin-bottom: 5px;
+            font-size: 100px
+        }
+        
+        input[type="number"] {
+            width: 300px;
+            padding: 15px;
+            border: 1px solid #999;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        
+        input[type="submit"] {
+            padding: 15px 30px;
+            background-color: #4CAF50;
+            color: #000000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Current Temperature: [temp]</h1>
+
+        <p>Trigger Temperature: [trig]</p>
+        <form action='/update' method='get'>
+        <input type="number" id="trig" name="trig" min="10" max="60">
+        <input type="submit" value="submit"></form>
+    </div>
+
+</body>
+</html>
